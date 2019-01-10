@@ -1,0 +1,13 @@
+{
+	"project_name"              : "Name of the project",
+	"project_slug"              : "{{cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_')}}",
+    "project_short_description" : "A short description of the project",
+    "version"                   : "0.1.0",
+    "release_date"              : "{% now 'local' %}",
+    "copyright"                 : "Block Research Group - ETH Zurich",
+	"author_name"               : "Your name",
+	"author_email"              : "Your email",
+    "github_username"           : "Your personal Github username",
+    "github_organization"       : "BlockResearchGroup",
+    "_extensions"               : ["jinja2_time.TimeExtension"]
+}
