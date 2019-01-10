@@ -20,7 +20,7 @@ import sys
 
 __author__ = ["{{cookiecutter.author_name}} <{{cookiecutter.author_email}}>"]
 __copyright__ = "{{cookiecutter.copyright}}"
-__license__ = "{{cookiecutter.license}}"
+__license__ = "MIT License"
 __email__ = "{{cookiecutter.author_email}}"
 __version__ = "{{cookiecutter.version}}"
 
