@@ -1,33 +1,35 @@
+{% raw -%}
 .. rst-class:: detail
 
-\{\{ objname \}\}
-\{\{ underline \}\}
+{{ objname }}
+{{ underline }}
 
-.. currentmodule:: \{\{ module \}\}
+.. currentmodule:: {{ module }}
 
-.. autoclass:: \{\{ objname \}\}
+.. autoclass:: {{ objname }}
 
-   \{% block methods %\}
-   \{% if methods %\}
+   {% block methods %}
+   {% if methods %}
    .. rubric:: Methods
 
    .. autosummary::
       :toctree:
 
-   \{% for item in methods %\}
-      ~\{\{ name \}\}.\{\{ item \}\}
-   \{%- endfor %\}
-   \{% endif %\}
-   \{% endblock %\}
+   {% for item in methods %}
+      ~{{ name }}.{{ item }}
+   {%- endfor %}
+   {% endif %}
+   {% endblock %}
 
-   \{% block attributes %\}
-   \{% if attributes %\}
+   {% block attributes %}
+   {% if attributes %}
    .. rubric:: Attributes
 
    .. autosummary::
-   \{% for item in attributes %\}
-      ~\{\{ name \}\}.\{\{ item \}\}
-   \{%- endfor %\}
-   \{% endif %\}
-   \{% endblock %\}
+   {% for item in attributes %}
+      ~{{ name }}.{{ item }}
+   {%- endfor %}
+   {% endif %}
+   {% endblock %}
 
+{%- endraw %}

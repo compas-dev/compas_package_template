@@ -1,8 +1,10 @@
+{% raw -%}
 .. rst-class:: detail
 
-\{\{ objname \}\}
-\{\{ underline \}\}
+{{ objname }}
+{{ underline }}
 
-.. currentmodule:: \{\{ module \}\}
+.. currentmodule:: {{ module }}
 
-.. auto\{\{ objtype \}\}:: \{\{ objname \}\}
+.. auto{{ objtype }}:: {{ objname }}
+{%- endraw %}
