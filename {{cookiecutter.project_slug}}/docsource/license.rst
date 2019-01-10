@@ -1,13 +1,5 @@
 ********************************************************************************
-{{cookiecutter.project_slug}}
+License
 ********************************************************************************
 
-.. toctree::
-   :maxdepth: 3
-   :titlesonly:
-
-   intro
-   gettingstarted
-   examples
-   api
-   license
+.. literalinclude:: ../LICENSE
