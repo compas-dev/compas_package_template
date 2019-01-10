@@ -24,14 +24,14 @@ requirements = read('requirements.txt').split('\n')
 optional_requirements = {}
 
 setup(
-    name={{cookiecutter.project_name}},
-    version={{cookiecutter.version}},
-    description={{cookiecutter.project_short_description}},
+    name="{{cookiecutter.project_name}}",
+    version="{{cookiecutter.version}}",
+    description="{{cookiecutter.project_short_description}}",
     long_description=long_description,
-    long_description_content_type='text/markdown',
-    url=https://github.com/{{cookiecutter.github_organization}}/{{cookiecutter.project_slug}},
-    author={{cookiecutter.author_name}},
-    author_email={{cookiecutter.author_email}},
+    long_description_content_type="text/markdown",
+    url="https://github.com/{{cookiecutter.github_organization}}/{{cookiecutter.project_slug}}",
+    author="{{cookiecutter.author_name}}",
+    author_email="{{cookiecutter.author_email}}",
     license="MIT license",
     classifiers=[
         'Development Status :: 4 - Beta',
@@ -52,7 +52,7 @@ setup(
     ],
     keywords=[],
     project_urls=[],
-    packages=[{{cookiecutter.project_slug}}],
+    packages=["{{cookiecutter.project_slug}}"],
     package_dir={'': 'src'},
     package_data={},
     data_files=[],
