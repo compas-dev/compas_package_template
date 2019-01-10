@@ -25,7 +25,7 @@ optional_requirements = {}
 
 setup(
     name={{cookiecutter.project_name}},
-    version={{cookeicutter.version}},
+    version={{cookiecutter.version}},
     description={{cookiecutter.project_short_description}},
     long_description=long_description,
     long_description_content_type='text/markdown',
