@@ -51,7 +51,7 @@ setup(
         'Programming Language :: Python :: Implementation :: CPython',
     ],
     keywords=[],
-    project_urls=[],
+    project_urls={},
     packages=["{{cookiecutter.project_slug}}"],
     package_dir={'': 'src'},
     package_data={},
