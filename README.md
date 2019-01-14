@@ -61,7 +61,7 @@ $ cd <your-projects-folder>
 Generate a new Cookiecutter template layout:
 
 ```
-$ cookiecutter gh:BlockResearchGroup/compas-package-template
+$ cookiecutter gh:BlockResearchGroup/cookiecutter-compas-package
 ```
 
 Go to project folder:
