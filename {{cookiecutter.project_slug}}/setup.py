@@ -24,7 +24,7 @@ requirements = read('requirements.txt').split('\n')
 optional_requirements = {}
 
 setup(
-    name="{{cookiecutter.project_name}}",
+    name="{{cookiecutter.project_slug}}",
     version="{{cookiecutter.version}}",
     description="{{cookiecutter.project_short_description}}",
     long_description=long_description,
