@@ -4,8 +4,12 @@ python:
 - "2.7"
 - "3.6"
 
+before_install:
+- pip install --upgrade pip
+- pip install Cython --install-option="--no-cython-compile"
+
 install:
-- pip install -r requirements-dev.txt
+- pip install --process-dependency-links --no-cache-dir -r requirements-dev.txt
 
 script:
 - invoke test

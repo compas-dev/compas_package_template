@@ -50,7 +50,7 @@ autodoc_default_flags = [
 
 autodoc_member_order = 'alphabetical'
 
-autoclass_content = "class"
+autoclass_content = 'class'
 
 # autosummary options
 
@@ -98,9 +98,9 @@ html_theme = 'compaspkg'
 html_theme_path = sphinx_compas_theme.get_html_theme_path()
 
 html_theme_options = {
-    "package_name"    : "{{cookiecutter.project_slug}}",
-    "package_title"   : project,
-    "package_version" : release,
+    'package_name'    : '{{cookiecutter.project_slug}}',
+    'package_title'   : project,
+    'package_version' : release,
 }
 
 html_context = {}
