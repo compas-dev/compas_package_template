@@ -1,6 +1,6 @@
 # Credits
 
-## Development Lead
+## Project Lead
 
 * {{cookiecutter.author_name}} <<{{cookiecutter.author_email}}>>
 
