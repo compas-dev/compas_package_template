@@ -2,7 +2,7 @@
 
 # If your documentation needs a minimal Sphinx version, state it here.
 #
-# needs_sphinx = '1.0'
+# needs_sphinx = "1.0"
 
 import sys
 import os
@@ -12,18 +12,18 @@ import sphinx_compas_theme
 
 # -- General configuration ------------------------------------------------
 
-project = '{{cookiecutter.project_name}}'
-copyright = '{{cookiecutter.copyright}}'
-author = '{{cookiecutter.author_name}}'
-release = '{{cookiecutter.version}}'
-version = '.'.join(release.split('.')[0:2])
+project = "{{cookiecutter.project_name}}"
+copyright = "{{cookiecutter.copyright}}"
+author = "{{cookiecutter.author_name}}"
+release = "0.1.0"
+version = ".".join(release.split(".")[0:2])
 
-master_doc = 'index'
-source_suffix = ['.rst', ]
-templates_path = ['_templates', ]
+master_doc = "index"
+source_suffix = [".rst", ]
+templates_path = ["_templates", ]
 exclude_patterns = []
 
-pygments_style   = 'sphinx'
+pygments_style   = "sphinx"
 show_authors     = True
 add_module_names = True
 language         = None
@@ -32,25 +32,25 @@ language         = None
 # -- Extension configuration ------------------------------------------------
 
 extensions = [
-    'sphinx.ext.autodoc',
-    'sphinx.ext.autosummary',
-    'sphinx.ext.doctest',
-    'sphinx.ext.intersphinx',
-    'sphinx.ext.mathjax',
-    'sphinx.ext.napoleon',
-    'matplotlib.sphinxext.plot_directive',
+    "sphinx.ext.autodoc",
+    "sphinx.ext.autosummary",
+    "sphinx.ext.doctest",
+    "sphinx.ext.intersphinx",
+    "sphinx.ext.mathjax",
+    "sphinx.ext.napoleon",
+    "matplotlib.sphinxext.plot_directive",
 ]
 
 # autodoc options
 
 autodoc_default_flags = [
-    'undoc-members',
-    'show-inheritance',
+    "undoc-members",
+    "show-inheritance",
 ]
 
-autodoc_member_order = 'alphabetical'
+autodoc_member_order = "alphabetical"
 
-autoclass_content = 'class'
+autoclass_content = "class"
 
 # autosummary options
 
@@ -87,28 +87,28 @@ plot_html_show_formats = False
 # intersphinx options
 
 intersphinx_mapping = {
-    'python': ('https://docs.python.org/', None),
-    'compas': ('https://compas-dev.github.io/main', 'https://compas-dev.github.io/main/objects.inv'),
+    "python": ("https://docs.python.org/", None),
+    "compas": ("https://compas-dev.github.io/main", "https://compas-dev.github.io/main/objects.inv"),
 }
 
 
 # -- Options for HTML output ----------------------------------------------
 
-html_theme = 'compaspkg'
+html_theme = "compaspkg"
 html_theme_path = sphinx_compas_theme.get_html_theme_path()
 
 html_theme_options = {
-    'package_name'    : '{{cookiecutter.project_slug}}',
-    'package_title'   : project,
-    'package_version' : release,
+    "package_name"    : "{{cookiecutter.project_slug}}",
+    "package_title"   : project,
+    "package_version" : release,
 }
 
 html_context = {}
 html_static_path = []
-html_extra_path = ['.nojekyll']
-html_last_updated_fmt = ''
+html_extra_path = [".nojekyll"]
+html_last_updated_fmt = ""
 html_copy_source = False
 html_show_sourcelink = False
-html_add_permalinks = ''
+html_add_permalinks = ""
 html_experimental_html5_writer = True
 html_compact_lists = True
