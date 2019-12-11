@@ -1,14 +1,14 @@
 {
-	"project_name"              : "Name of the project",
-	"project_slug"              : "{{cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_')}}",
-    "project_short_description" : "A short description of the project",
-    "version"                   : "0.1.0",
-    "COMPAS_version"            : "0.5.1",
-    "release_date"              : "{% now 'local' %}",
-    "copyright"                 : "Block Research Group - ETH Zurich",
-	"author_name"               : "Your name",
-	"author_email"              : "Your email",
-    "github_username"           : "Your personal Github username",
-    "github_organization"       : "BlockResearchGroup",
-    "_extensions"               : ["jinja2_time.TimeExtension"]
+    "project_name": "",
+    "project_slug": "{{cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_')}}",
+    "project_short_description": "",
+    "COMPAS_version": "",
+    "copyright": "",
+    "author_name": "",
+    "author_email": "",
+    "github_username": "",
+    "github_organization": "",
+    "_extensions": [
+        "jinja2_time.TimeExtension"
+    ]
 }
