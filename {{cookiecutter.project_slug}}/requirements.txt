@@ -1,5 +1,0 @@
-{% if cookiecutter.COMPAS_version %}
-COMPAS>={{cookiecutter.COMPAS_version}}
-{% else %}
-COMPAS
-{% endif %}
