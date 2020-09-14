@@ -1,6 +1,6 @@
 # COMPAS package template
 
-This project automates the set up of a new python-based package for the COMPAS framework using an opinionated Cookiecutter template.
+Cookiecutter template for COMPAS extensions.
 
 [Cookiecutter](https://cookiecutter.readthedocs.io/en/latest/readme.html#)
 is a command-line utility that lets you quickly bootstrap a new project from a template.
