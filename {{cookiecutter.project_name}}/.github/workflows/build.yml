@@ -10,7 +10,7 @@ on:
 
 jobs:
   build-package:
-    runs-on: ${{ matrix.os }}
+    runs-on: ${{ '{{' }} matrix.os {{ '}}' }}
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
@@ -19,10 +19,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Set up Python ${{ matrix.python-version }}
+      - name: Set up Python ${{ '{{' }} matrix.python-version {{ '}}' }}
         uses: actions/setup-python@v2
         with:
-          python-version: ${{ matrix.python-version }}
+          python-version: ${{ '{{' }} matrix.python-version {{ '}}' }}
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
@@ -67,4 +67,4 @@ jobs:
           build_dir: dist/docs
           keep_history: true
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ '{{' }} secrets.GITHUB_TOKEN {{ '}}' }}
