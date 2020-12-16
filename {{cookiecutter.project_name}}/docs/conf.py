@@ -101,6 +101,10 @@ html_theme_options = {
     "package_name"    : "{{cookiecutter.project_slug}}",
     "package_title"   : project,
     "package_version" : release,
+    # Uncomment below to enable doc versioning drop down list
+    # "package_repo": "https://PACKAGE_REPO_URL_HERE/", # Make sure url ends with "/"
+    # "package_docs": "https://PACKAGE_DOC_SITE_URL_HERE/", # Make sure url ends with "/"
+    # "package_old_versions_txt": "https://PACKAGE_DOC_SITE_URL_HERE/doc_versions.txt"
 }
 
 html_context = {}
