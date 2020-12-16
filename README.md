@@ -73,6 +73,14 @@ To use the coding style feature with [EditorConfig](https://editorconfig.org/):
 * Some text editors have a native EditorConfig.
   If yours doesn't you can download the appropriate plugin [here](https://editorconfig.org/#download).
 
+## Github Actions
+Basic CI/CD has already been setup in the .github folder, including automattic building test cross systems, documentation generation etc. There are few additional settings can be enabled manually:
+### Enable Automatic Publishing to PYPI
+Firstly add your PYPI token in repo secrets, then go to [.github/workflows/release.yaml]({{cookiecutter.project_name}}/.github/workflows/release.yml) and uncomment Lines 28~48
+
+### Enable versioning drop down list on documentation site
+In [docs/conf.py]({{cookiecutter.project_name}}/docs/conf.py), fill in correct URL and uncomment Lines 104~107
+
 ## License
 
 This template is licensed under the terms of the [MIT License](/LICENSE)
