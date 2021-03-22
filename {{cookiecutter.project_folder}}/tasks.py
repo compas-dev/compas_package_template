@@ -78,7 +78,7 @@ def clean(ctx, docs=True, bytecode=True, builds=True):
                     dirs.remove('.git')
         folders = []
         if docs:
-            folders.append('docs/api/generated')
+            folders.append('docs/**/generated')
         folders.append('dist/')
         if bytecode:
             for t in ('src', 'tests'):
@@ -108,13 +108,6 @@ def docs(ctx, doctest=False, rebuild=True, check_links=False):
 
 
 @task()
-def lint(ctx):
-    """Check the consistency of coding style."""
-    log.write('Running flake8 python linter...')
-    ctx.run('flake8 src')
-
-
-@task()
 def testdocs(ctx, rebuild=True):
     """Test the examples in the docstrings."""
     log.write('Running doctest...')
@@ -131,14 +124,10 @@ def linkcheck(ctx, rebuild=True):
 
 
 @task()
-def check(ctx):
-    """Check the consistency of documentation, coding style and a few other things."""
-    with chdir(BASE_FOLDER):
-        lint(ctx)
-        log.write('Checking MANIFEST.in...')
-        ctx.run('check-manifest')
-        log.write('Checking metadata...')
-        ctx.run('python setup.py check --strict --metadata')
+def lint(ctx):
+    """Check the consistency of coding style."""
+    log.write('Running flake8 python linter...')
+    ctx.run('flake8 src')
 
 
 @task(help={
@@ -152,6 +141,17 @@ def test(ctx, checks=False, doctest=False):
         if doctest:
             cmd.append('--doctest-modules')
         ctx.run(' '.join(cmd))
+
+
+@task()
+def check(ctx):
+    """Check the consistency of documentation, coding style and a few other things."""
+    with chdir(BASE_FOLDER):
+        lint(ctx)
+        log.write('Checking MANIFEST.in...')
+        ctx.run('check-manifest')
+        log.write('Checking metadata...')
+        ctx.run('python setup.py check --strict --metadata')
 
 
 @task
