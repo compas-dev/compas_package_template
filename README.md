@@ -73,6 +73,11 @@ To use the coding style feature with [EditorConfig](https://editorconfig.org/):
 * Some text editors have a native EditorConfig.
   If yours doesn't you can download the appropriate plugin [here](https://editorconfig.org/#download).
 
-## License
+## Github Actions
+Basic CI/CD has already been setup in the .github folder, including automatic building test cross systems, documentation generation etc. 
 
+### Automatic Publishing to PYPI
+This requires adding your PYPI token in repo or org secrets as `PYPI`, if you don't need this feature, go to [.github/workflows/release.yaml]({{cookiecutter.project_folder}}/.github/workflows/release.yml) and delete Lines 27~37.
+
+## License
 This template is licensed under the terms of the [MIT License](/LICENSE)
