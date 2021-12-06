@@ -22,7 +22,7 @@ replacing all the generic info that finds surrounded by templating tags `{{` and
 * `.github`
 * `data`
 * `docs`
-* `examples`
+* `scripts`
 * `src`
 * `temp`
 * `tests`
@@ -31,10 +31,10 @@ replacing all the generic info that finds surrounded by templating tags `{{` and
 * `.gitignore`
 * `AUTHORS.md`
 * `CHANGELOG.md`
+* `conftest.py`
 * `CONTRIBUTING.md`
 * `LICENSE`
 * `MANIFEST.in`
-* `pytest.ini`
 * `README.md`
 * `requirements-dev.txt`
 * `requirements.txt`
@@ -44,7 +44,7 @@ replacing all the generic info that finds surrounded by templating tags `{{` and
 
 ## Requirements
 
-Install `cookiecutter` command line: `pip install cookiecutter`
+Install the `cookiecutter` command line utility: `pip install cookiecutter`.
 
 ## Usage
 
@@ -66,18 +66,29 @@ Go to project folder:
 cd <project-slug>
 ```
 
+Add the project files to the new `git` repo:
+
+```bash
+git add .
+git commit -m "Initial commit"
+```
+
 ## Additional settings
 
 To use the coding style feature with [EditorConfig](https://editorconfig.org/):
 
-* Some text editors have a native EditorConfig.
-  If yours doesn't you can download the appropriate plugin [here](https://editorconfig.org/#download).
+Some text editors have a native EditorConfig.
+If yours doesn't, you can download the appropriate plugin [here](https://editorconfig.org/#download).
 
 ## Github Actions
-Basic CI/CD has already been setup in the .github folder, including automatic building test cross systems, documentation generation etc. 
+
+Basic CI/CD has already been setup in the .github folder, including automatic building and testing across systems, documentation generation etc. 
 
 ### Automatic Publishing to PYPI
-This requires adding your PYPI token in repo or org secrets as `PYPI`, if you don't need this feature, go to [.github/workflows/release.yaml]({{cookiecutter.project_folder}}/.github/workflows/release.yml) and delete Lines 27~37.
+
+This requires adding your PYPI token in the repo or organization secrets as `PYPI`.
+If you don't need this feature, go to [.github/workflows/release.yaml]({{cookiecutter.project_folder}}/.github/workflows/release.yml) and delete Lines 27~37.
 
 ## License
-This template is licensed under the terms of the [MIT License](/LICENSE)
+
+This template is licensed under the terms of the [MIT License](/LICENSE).
