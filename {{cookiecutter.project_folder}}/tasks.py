@@ -218,21 +218,16 @@ def build_ghuser_components(ctx, gh_io_folder=None, ironpython=None):
 def release(ctx, release_type):
     """Releases the project in one swift command!"""
     if release_type not in ('patch', 'minor', 'major'):
-        raise Exit('The release type parameter is invalid.\nMust be one of: major, minor, patch')
+        raise Exit('The release type parameter is invalid.\nMust be one of: major, minor, patch.')
 
     # Run checks
     ctx.run('invoke check test')
 
-    # # Bump version and git tag it
-    # if release_type == 'release':
-    #     ctx.run('bump2version release --verbose')
-    # else:
-    #     ctx.run('bump2version %s --verbose --no-tag' % release_type)
-    #     ctx.run('bump2version release --verbose')
-
     # Bump version and git tag it
-    ctx.run('bump2version %s --verbose --no-tag' % release_type)
-    ctx.run('bump2version release --verbose')
+    ctx.run('bump2version %s --verbose' % release_type)
+
+    # Prepare the change log for the next release
+    prepare_changelog(ctx)
 
 
 @contextlib.contextmanager
