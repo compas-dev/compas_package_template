@@ -1,5 +1,6 @@
 attrs >=17.4
 autopep8
+black
 bump2version >=1.0.1
 check-manifest >=0.36
 compas_invocations
