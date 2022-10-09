@@ -28,7 +28,6 @@ ns.configure(
         "ghuser": {
             "source_dir": "src/{{ cookiecutter.project_slug }}/ghpython/components",
             "target_dir": "src/{{ cookiecutter.project_slug }}/ghpython/components/ghuser",
-            "prefix": "(FAB)",
         },
     }
 )
