@@ -1,2 +1,9 @@
+********************************************************************************
+{{cookiecutter.project_slug}}
+********************************************************************************
 
-.. automodule:: {{cookiecutter.project_slug}}
+.. currentmodule:: {{cookiecutter.project_slug}}
+
+
+.. toctree::
+    :maxdepth: 1

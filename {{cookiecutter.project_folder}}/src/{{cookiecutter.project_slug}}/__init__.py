@@ -1,17 +1,3 @@
-"""
-********************************************************************************
-{{cookiecutter.project_slug}}
-********************************************************************************
-
-.. currentmodule:: {{cookiecutter.project_slug}}
-
-
-.. toctree::
-    :maxdepth: 1
-
-
-"""
-
 from __future__ import print_function
 
 import os
