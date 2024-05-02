@@ -57,7 +57,7 @@ cd <your-projects-folder>
 Generate a new Cookiecutter template layout:
 
 ```bash
-cookiecutter gh:compas-dev/tpl-extension
+cookiecutter gh:compas-dev/compas_package_template
 ```
 
 Go to project folder:
