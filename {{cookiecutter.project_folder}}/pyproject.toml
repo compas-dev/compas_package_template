@@ -20,11 +20,15 @@ dynamic = ['dependencies', 'optional-dependencies', 'version']
 classifiers = [
     "Development Status :: 4 - Beta",
     "Topic :: Scientific/Engineering",
+    "Operating System :: Unix",
+    "Operating System :: POSIX",
+    "Operating System :: Microsoft :: Windows",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
 ]
 
 [project.urls]
@@ -32,6 +36,8 @@ Homepage = "https://{{ cookiecutter.github_organization }}.github.io/{{ cookiecu
 Documentation = "https://{{ cookiecutter.github_organization }}.github.io/{{ cookiecutter.project_slug }}"
 Repository = "{% if cookiecutter.github_organization %}https://github.com/{{ cookiecutter.github_organization }}/{{ cookiecutter.project_slug }}{% endif %}"
 Changelog = "{% if cookiecutter.github_organization %}https://github.com/{{ cookiecutter.github_organization }}/{{ cookiecutter.project_slug }}/blob/main/CHANGELOG.md"
+Issues = "https://github.com/{{ cookiecutter.github_organization }}/{{ cookiecutter.project_slug }}/issues"
+Forum = "https://forum.compas-framework.org/"
 
 # ============================================================================
 # setuptools config
@@ -92,10 +98,10 @@ replace = "[{new_version}] {now:%Y-%m-%d}"
 # ============================================================================
 
 [tool.black]
-line-length = 119
+line-length = 179
 
 [tool.ruff]
-line-length = 119
+line-length = 179
 indent-width = 4
 target-version = "py39"
 
@@ -109,6 +115,9 @@ select = ["E", "F", "I"]
 
 [tool.ruff.lint.isort]
 force-single-line = true
+known-first-party = [
+    "{{ cookiecutter.project_slug }}",
+]
 
 [tool.ruff.lint.pydocstyle]
 convention = "numpy"

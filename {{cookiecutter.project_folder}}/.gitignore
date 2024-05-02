@@ -4,7 +4,7 @@ __pycache__/
 *$py.class
 
 # C extensions
-*.so
+# *.so
 
 # Distribution / packaging
 .Python
@@ -12,7 +12,7 @@ env/
 build/
 develop-eggs/
 dist/
-downloads/
+# downloads/
 eggs/
 .eggs/
 lib/
@@ -45,6 +45,7 @@ nosetests.xml
 coverage.xml
 *.cover
 .hypothesis/
+.pytest_cache/
 
 # Translations
 *.mo
@@ -94,27 +95,52 @@ ENV/
 # Rope project settings
 .ropeproject
 
+# PyCharm project settings
+.idea/
+
 # mkdocs documentation
 /site
 
 # mypy
 .mypy_cache/
 
-# ==============================================================================
-# {{ cookiecutter.project_name }}
-# ==============================================================================
+# ------------------------------------------------------------------------------
+# compas
+# ------------------------------------------------------------------------------
+
+dist/docs
+
+generated/
 
 *.3dmbak
 *.rhl
-*.rui_bak
+
+libs/**
+!libs/PLACEHOLDER
 
 temp/**
 !temp/PLACEHOLDER
 
-.DS_Store
+src/.build/**
+
+data/bunny
+data/models
+data/ctralie
+*.tar.gz
+
+data/models
+data/ctralie
+
+*.pickle
+
+*.DS_Store
 
 .vscode
 
-docs/api/generated/
+NOTES
 
-conda.recipe/
+docs/reference/__old/
+
+scripts/
+
+.ruff_cache
