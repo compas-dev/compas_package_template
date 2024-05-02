@@ -35,7 +35,7 @@ classifiers = [
 Homepage = "https://{{ cookiecutter.github_organization }}.github.io/{{ cookiecutter.project_slug }}"
 Documentation = "https://{{ cookiecutter.github_organization }}.github.io/{{ cookiecutter.project_slug }}"
 Repository = "{% if cookiecutter.github_organization %}https://github.com/{{ cookiecutter.github_organization }}/{{ cookiecutter.project_slug }}{% endif %}"
-Changelog = "{% if cookiecutter.github_organization %}https://github.com/{{ cookiecutter.github_organization }}/{{ cookiecutter.project_slug }}/blob/main/CHANGELOG.md"
+Changelog = "{% if cookiecutter.github_organization %}https://github.com/{{ cookiecutter.github_organization }}/{{ cookiecutter.project_slug }}/blob/main/CHANGELOG.md{% endif %}"
 Issues = "https://github.com/{{ cookiecutter.github_organization }}/{{ cookiecutter.project_slug }}/issues"
 Forum = "https://forum.compas-framework.org/"
 
