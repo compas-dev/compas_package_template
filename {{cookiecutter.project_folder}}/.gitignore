@@ -4,7 +4,7 @@ __pycache__/
 *$py.class
 
 # C extensions
-# *.so
+*.so
 
 # Distribution / packaging
 .Python
@@ -12,7 +12,7 @@ env/
 build/
 develop-eggs/
 dist/
-# downloads/
+downloads/
 eggs/
 .eggs/
 lib/
@@ -123,13 +123,9 @@ temp/**
 
 src/.build/**
 
-data/bunny
-data/models
-data/ctralie
-*.tar.gz
+data/
 
-data/models
-data/ctralie
+*.tar.gz
 
 *.pickle
 
@@ -137,9 +133,7 @@ data/ctralie
 
 .vscode
 
-NOTES
-
-docs/reference/__old/
+docs/api/generated/
 
 scripts/
 
