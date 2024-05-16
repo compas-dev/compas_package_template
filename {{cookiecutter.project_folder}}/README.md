@@ -2,91 +2,28 @@
 
 {{ cookiecutter.project_short_description }}
 
+## Installation
 
-## Getting started with this project
+Stable releases can be installed from PyPI.
 
-### Setup code editor
+```bash
+pip install {{ cookiecutter.project_slug }}
+```
 
-1. Open project folder in VS Code
-2. Select python environment for the project
-3. First time using VS Code and on Windows? Make sure select the correct terminal profile: `Ctrl+Shift+P`, `Terminal: Select Default Profile` and select `Command Prompt`.
+To install the latest version for development, do:
 
-> All terminal commands in the following sections can be run from the VS Code integrated terminal. 
+```bash
+git clone https://github.com/{{ cookiecutter.github_organization }}/{{ cookiecutter.project_slug }}.git
+cd {{ cookiecutter.project_slug }}
+pip install -e ".[dev]"
+```
 
+## Documentation
 
-### First steps with git
+For further "getting started" instructions, a tutorial, examples, and an API reference,
+please check out the online documentation here: [{{ cookiecutter.project_name }} docs](https://{{ cookiecutter.github_organization }}.github.io/{{ cookiecutter.project_slug }})
 
-1. Go to the `Source control` tab
-2. Make an initial commit with all newly created files
+## Issue Tracker
 
+If you find a bug or if you have a problem with running the code, please file an issue on the [Issue Tracker](https://github.com/{{ cookiecutter.github_organization }}/{{ cookiecutter.project_slug }}/issues).
 
-### First steps with code
-
-1. Install the newly created project 
-
-        pip install -e .
-
-2. Install it on Rhino
-
-        python -m compas_rhino.install
-
-
-### Code conventions
-
-Code convention follows [PEP8](https://pep8.org/) style guidelines and line length of 120 characters.
-
-1. Check adherence to style guidelines
-
-        invoke lint
-
-2. Format code automatically
-
-        invoke format
-
-
-### Documentation
-
-Documentation is generated automatically out of docstrings and [RST](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html) files in this repository
-
-1. Generate the docs
-
-        invoke docs
-
-2. Check links in docs are valid
-
-        invoke linkcheck
-
-3. Open docs in your browser (file explorer -> `dist/docs/index.html`)
-
-
-### Testing
-
-Tests are written using the [pytest](https://docs.pytest.org/) framework
-
-1. Run all tests from terminal
-
-        invoke test
-
-2. Or run them from VS Code from the `Testing` tab
-
-
-### Developing Grasshopper components
-
-We use [Grasshopper Componentizer](https://github.com/compas-dev/compas-actions.ghpython_components) to develop Python components that can be stored and edited on git.
-
-1. Build components
-
-        invoke build-ghuser-components
-
-2. Install components on Rhino
-
-        python -m compas_rhino.install
-
-
-### Publish release
-
-Releases follow the [semver](https://semver.org/spec/v2.0.0.html) versioning convention.
-
-1. Create a new release
-
-        invoke release major
