@@ -26,4 +26,3 @@ please check out the online documentation here: [{{ cookiecutter.project_name }}
 ## Issue Tracker
 
 If you find a bug or if you have a problem with running the code, please file an issue on the [Issue Tracker](https://github.com/{{ cookiecutter.github_organization }}/{{ cookiecutter.project_slug }}/issues).
-
