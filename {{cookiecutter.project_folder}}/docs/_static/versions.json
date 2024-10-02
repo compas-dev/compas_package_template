@@ -1,7 +1,0 @@
-[
-    {
-        "name": "latest",
-        "version": "unreleased",
-        "url": "https://{{ cookiecutter.github_organization }}.github.io/{{ cookiecutter.project_slug }}/latest/"
-    }
-]
