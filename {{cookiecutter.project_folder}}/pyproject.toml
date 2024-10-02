@@ -25,9 +25,9 @@ classifiers = [
     "Operating System :: Microsoft :: Windows",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
 ]
 
 [project.urls]
@@ -63,7 +63,13 @@ where = ["src"]
 minversion = "6.0"
 testpaths = ["tests", "src/{{ cookiecutter.project_slug }}"]
 python_files = ["test_*.py", "*_test.py", "test.py"]
-addopts = ["-ra", "--strict-markers", "--doctest-glob=*.rst", "--tb=short"]
+addopts = [
+    "-ra",
+    "--strict-markers",
+    "--doctest-glob=*.rst",
+    "--tb=short",
+    "--import-mode=importlib",
+]
 doctest_optionflags = [
     "NORMALIZE_WHITESPACE",
     "IGNORE_EXCEPTION_DETAIL",
@@ -114,9 +120,7 @@ select = ["E", "F", "I"]
 
 [tool.ruff.lint.isort]
 force-single-line = true
-known-first-party = [
-    "{{ cookiecutter.project_slug }}",
-]
+known-first-party = ["{{ cookiecutter.project_slug }}"]
 
 [tool.ruff.lint.pydocstyle]
 convention = "numpy"
