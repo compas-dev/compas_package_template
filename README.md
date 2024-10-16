@@ -26,20 +26,15 @@ replacing all the generic info that finds surrounded by templating tags `{{` and
 * `src`
 * `temp`
 * `tests`
-* `.bumpversion.cfg`
 * `.editorconfig`
 * `.gitignore`
-* `AUTHORS.md`
 * `CHANGELOG.md`
-* `conftest.py`
 * `CONTRIBUTING.md`
 * `LICENSE`
-* `MANIFEST.in`
+* `pyproject.toml`
 * `README.md`
 * `requirements-dev.txt`
 * `requirements.txt`
-* `setup.cfg`
-* `setup.py`
 * `tasks.py`
 
 ## Requirements
@@ -82,7 +77,7 @@ If yours doesn't, you can download the appropriate plugin [here](https://editorc
 
 ## Github Actions
 
-Basic CI/CD has already been setup in the .github folder, including automatic building and testing across systems, documentation generation etc. 
+Basic CI/CD has already been setup in the .github folder, including automatic building and testing across systems, documentation generation etc.
 
 ### Automatic Publishing to PYPI
 
