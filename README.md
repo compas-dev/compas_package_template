@@ -1,6 +1,6 @@
-# COMPAS package template
+# SOMS package template
 
-Cookiecutter template for COMPAS extensions.
+Cookiecutter template for SOMS repositories.
 
 [Cookiecutter](https://cookiecutter.readthedocs.io/en/latest/readme.html#)
 is a command-line utility that lets you quickly bootstrap a new project from a template.
@@ -43,6 +43,8 @@ Install the `cookiecutter` command line utility: `pip install cookiecutter`.
 
 ## Usage
 
+First clone this repository in a convenient location.
+
 In the terminal, go to the folder where you want to place your project:
 
 ```bash
@@ -52,7 +54,7 @@ cd <your-projects-folder>
 Generate a new Cookiecutter template layout:
 
 ```bash
-cookiecutter gh:compas-dev/compas_package_template
+cookiecutter path/to/soms_package_template
 ```
 
 Go to project folder:
