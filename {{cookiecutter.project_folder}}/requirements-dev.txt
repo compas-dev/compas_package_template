@@ -4,6 +4,6 @@ bump-my-version
 compas_invocations2
 invoke >=0.14
 ruff
-sphinx_compas2_theme
+sphinx_soms_theme
 twine
 wheel

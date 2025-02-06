@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from sphinx.writers import html, html5
-import sphinx_compas2_theme
+import sphinx_soms_theme
 
 # -- General configuration ------------------------------------------------
 
@@ -14,12 +14,12 @@ organization = "{{ cookiecutter.github_organization }}"
 
 master_doc = "index"
 source_suffix = {".rst": "restructuredtext", ".md": "markdown"}
-templates_path = sphinx_compas2_theme.get_autosummary_templates_path()
-exclude_patterns = sphinx_compas2_theme.default_exclude_patterns
+templates_path = sphinx_soms_theme.get_autosummary_templates_path()
+exclude_patterns = sphinx_soms_theme.default_exclude_patterns
 add_module_names = True
 language = "en"
 
-latest_version = sphinx_compas2_theme.get_latest_version()
+latest_version = sphinx_soms_theme.get_latest_version()
 
 if latest_version == "Unreleased":
     release = "Unreleased"
@@ -30,7 +30,7 @@ else:
 
 # -- Extension configuration ------------------------------------------------
 
-extensions = sphinx_compas2_theme.default_extensions
+extensions = sphinx_soms_theme.default_extensions
 extensions.remove("sphinx.ext.linkcode")
 
 # numpydoc options
@@ -49,7 +49,7 @@ autodoc_typehints = "description"
 autodoc_typehints_format = "short"
 autodoc_typehints_description_target = "documented"
 
-autodoc_mock_imports = sphinx_compas2_theme.default_mock_imports
+autodoc_mock_imports = sphinx_soms_theme.default_mock_imports
 
 autodoc_default_options = {
     "undoc-members": True,
@@ -62,13 +62,13 @@ autoclass_content = "class"
 
 
 def setup(app):
-    app.connect("autodoc-skip-member", sphinx_compas2_theme.skip)
+    app.connect("autodoc-skip-member", sphinx_soms_theme.skip)
 
 
 # autosummary options
 
 autosummary_generate = True
-autosummary_mock_imports = sphinx_compas2_theme.default_mock_imports
+autosummary_mock_imports = sphinx_soms_theme.default_mock_imports
 
 # graph options
 
@@ -83,7 +83,8 @@ intersphinx_mapping = {
 
 # linkcode
 
-linkcode_resolve = sphinx_compas2_theme.get_linkcode_resolve(organization, package)
+linkcode_resolve = sphinx_soms_theme.get_linkcode_resolve(
+    organization, package)
 
 # extlinks
 
@@ -91,8 +92,8 @@ extlinks = {}
 
 # from pytorch
 
-sphinx_compas2_theme.replace(html.HTMLTranslator)
-sphinx_compas2_theme.replace(html5.HTML5Translator)
+sphinx_soms_theme.replace(html.HTMLTranslator)
+sphinx_soms_theme.replace(html5.HTML5Translator)
 
 # -- Options for HTML output ----------------------------------------------
 
@@ -133,8 +134,8 @@ html_theme_options = {
     },
     "check_switcher": False,
     "logo": {
-        "image_light": "_static/compas_icon_white.png",
-        "image_dark": "_static/compas_icon_white.png",
+        "image_light": "_static/som_logo_75.png",
+        "image_dark": "_static/som_logo_75.png",
         "text": project,
     },
     "navigation_depth": 3,
@@ -149,7 +150,7 @@ html_context = {
     "doc_path": "docs",
 }
 
-html_static_path = sphinx_compas2_theme.get_html_static_path() + ["_static"]
+html_static_path = sphinx_soms_theme.get_html_static_path() + ["_static"]
 html_css_files = []
 html_extra_path = []
 html_last_updated_fmt = ""
