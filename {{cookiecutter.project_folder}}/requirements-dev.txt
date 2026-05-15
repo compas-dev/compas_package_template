@@ -6,3 +6,4 @@ invoke >=0.14
 ruff
 twine
 wheel
+pytest
