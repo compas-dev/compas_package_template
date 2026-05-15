@@ -8,7 +8,4 @@
     "author_email": "",
     "github_username": "",
     "github_organization": "",
-    "_extensions": [
-        "jinja2_time.TimeExtension"
-    ]
 }
