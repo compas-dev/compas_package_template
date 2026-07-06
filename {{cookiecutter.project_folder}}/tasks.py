@@ -17,9 +17,15 @@ ns = Collection(
     build.prepare_changelog,
     build.clean,
     build.release,
+    build.build_ghuser_components,
 )
 ns.configure(
     {
         "base_folder": os.path.dirname(__file__),
+        "ghuser": {
+            "source_dir": "src/{{ cookiecutter.project_slug }}/ghpython/components",
+            "target_dir": "src/{{ cookiecutter.project_slug }}/ghpython/components/ghuser",
+            "prefix": "{{ cookiecutter.project_slug }}: ",
+        },
     }
 )
