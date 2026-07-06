@@ -87,7 +87,7 @@ plugins:
             - https://compas.dev/compas/latest/objects.inv
           options:
             allow_inspection: true
-            backlinks: tree
+            backlinks: false
             docstring_options:
               ignore_init_summary: true
               trim_doctest_flags: true
@@ -117,7 +117,7 @@ plugins:
             show_signature: true
             show_signature_annotations: true
             show_signature_type_parameters: true
-            show_source: false
+            show_source: true
             show_submodules: false
             show_symbol_type_heading: true
             show_symbol_type_toc: true
