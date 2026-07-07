@@ -1,18 +1,16 @@
 import os
 
 from compas_invocations2 import build
-from compas_invocations2 import docs
+from compas_invocations2 import mkdocs
 from compas_invocations2 import style
 from compas_invocations2 import tests
 from invoke.collection import Collection
 
 ns = Collection(
-    docs.help,
     style.check,
     style.lint,
     style.format,
-    docs.docs,
-    docs.linkcheck,
+    mkdocs.docs,
     tests.test,
     tests.testdocs,
     tests.testcodeblocks,
@@ -25,8 +23,8 @@ ns.configure(
     {
         "base_folder": os.path.dirname(__file__),
         "ghuser": {
-            "source_dir": "src/{{ cookiecutter.project_slug }}_ghpython/components",
-            "target_dir": "src/{{ cookiecutter.project_slug }}_ghpython/components/ghuser",
+            "source_dir": "src/{{ cookiecutter.project_slug }}/ghpython/components",
+            "target_dir": "src/{{ cookiecutter.project_slug }}/ghpython/components/ghuser",
             "prefix": "{{ cookiecutter.project_slug }}: ",
         },
     }
